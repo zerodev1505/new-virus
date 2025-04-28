@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://ctfcc0hqhf516"]
+
+[ext_resource type="PackedScene" uid="uid://cgn1d7i5ey44p" path="res://Satellite Radio.fbx" id="1_xevb7"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="Satellite Radio" parent="." instance=ExtResource("1_xevb7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00429595, 0.17384, 0.0196817)
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(0.0573637, 0.0520361, 0.997673, 0.00628101, 0.998602, -0.034477, -0.998334, 0.00927171, 0.0588251, 1.6761, 0.547488, 0.00628617)
+h_offset = 20.0
+fov = 115.894

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cnathnjgrya3r"
+path="res://.godot/imported/gun button hover.mp3-23f97499f1fb8562ed4d5bb0beb82069.mp3str"
+
+[deps]
+
+source_file="res://gun button hover.mp3"
+dest_files=["res://.godot/imported/gun button hover.mp3-23f97499f1fb8562ed4d5bb0beb82069.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://ga8pg3wvm73m"
+path="res://.godot/imported/desert eagle gunshot.mp3-a803514bff8e298e4b79a2e9af28ad39.mp3str"
+
+[deps]
+
+source_file="res://desert eagle gunshot.mp3"
+dest_files=["res://.godot/imported/desert eagle gunshot.mp3-a803514bff8e298e4b79a2e9af28ad39.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

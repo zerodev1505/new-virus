@@ -1,0 +1,66 @@
+[gd_scene load_steps=4 format=3 uid="uid://b6w0mg1so6sg6"]
+
+[ext_resource type="Script" path="res://shop.gd" id="1_nm0dy"]
+[ext_resource type="Texture2D" uid="uid://caj3tkpji7m4i" path="res://game-guns-vector-600nw-99098606 (2).png" id="1_xje7c"]
+[ext_resource type="Texture2D" uid="uid://da4egnnolm05u" path="res://icon.svg" id="3_peyig"]
+
+[node name="shop" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_nm0dy")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(9.62615e-08, 0.606311, 0.606391, 1)
+
+[node name="Game-guns-vector-600Nw-99098606(2)" type="Sprite2D" parent="."]
+position = Vector2(304, 151)
+scale = Vector2(3, 3)
+texture = ExtResource("1_xje7c")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 228.0
+offset_top = 268.0
+offset_right = 372.0
+offset_bottom = 323.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 40
+text = "Beretta"
+
+[node name="Label2" type="Label" parent="."]
+layout_mode = 0
+offset_left = 249.0
+offset_top = 325.0
+offset_right = 393.0
+offset_bottom = 380.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 40
+text = "equip"
+
+[node name="TextureButton" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 196.0
+offset_top = 333.0
+offset_right = 419.0
+offset_bottom = 388.0
+
+[node name="TextureButton2" type="TextureButton" parent="."]
+layout_mode = 0
+offset_right = 128.0
+offset_bottom = 128.0
+texture_normal = ExtResource("3_peyig")
+texture_pressed = ExtResource("3_peyig")
+texture_hover = ExtResource("3_peyig")
+
+[connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]
+[connection signal="pressed" from="TextureButton2" to="." method="_on_texture_button_2_pressed"]

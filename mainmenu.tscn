@@ -1,0 +1,104 @@
+[gd_scene load_steps=7 format=3 uid="uid://ds01124bk7bxq"]
+
+[ext_resource type="Texture2D" uid="uid://fnox7s8cha0r" path="res://8fe9d2e5-05db-41ec-b5b4-1661a97bf092.sketchpad (4) (1).png" id="1_002ho"]
+[ext_resource type="Texture2D" uid="uid://w3lkb6fnn438" path="res://8fe9d2e5-05db-41ec-b5b4-1661a97bf092.sketchpad (2) (1).png" id="1_hinc1"]
+[ext_resource type="Script" path="res://mainmenu.gd" id="1_wb6ma"]
+[ext_resource type="Texture2D" uid="uid://coc7eb7e0282t" path="res://8fe9d2e5-05db-41ec-b5b4-1661a97bf092.sketchpad (3) (1).png" id="2_jk7oq"]
+[ext_resource type="AudioStream" uid="uid://cnathnjgrya3r" path="res://gun button hover.mp3" id="5_4lph6"]
+[ext_resource type="AudioStream" uid="uid://y16pqkf31y2d" path="res://gun button press.mp3" id="6_xrhym"]
+
+[node name="mainmenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_wb6ma")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = 146.0
+offset_top = 1.0
+offset_right = 378.0
+offset_bottom = 647.0
+color = Color(0, 0, 0, 0.74902)
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 184.0
+offset_top = 23.0
+offset_right = 345.0
+offset_bottom = 144.0
+theme_override_font_sizes/font_size = 43
+text = "New 
+     Virus"
+
+[node name="Label3" type="Label" parent="."]
+layout_mode = 0
+offset_left = 188.0
+offset_top = 316.0
+offset_right = 333.0
+offset_bottom = 369.0
+theme_override_font_sizes/font_size = 34
+text = "Options"
+
+[node name="Label4" type="Label" parent="."]
+layout_mode = 0
+offset_left = 220.0
+offset_top = 539.0
+offset_right = 288.0
+offset_bottom = 592.0
+theme_override_font_sizes/font_size = 38
+text = "Exit"
+
+[node name="Label5" type="Label" parent="."]
+layout_mode = 0
+offset_left = 204.0
+offset_top = 433.0
+offset_right = 306.0
+offset_bottom = 482.0
+theme_override_font_sizes/font_size = 35
+text = "About"
+
+[node name="Play" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 204.0
+offset_top = 188.0
+offset_right = 337.0
+offset_bottom = 272.0
+scale = Vector2(0.8, 0.8)
+texture_normal = ExtResource("1_hinc1")
+texture_pressed = ExtResource("1_002ho")
+texture_hover = ExtResource("2_jk7oq")
+
+[node name="Options" type="TextureButton" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="About" type="TextureButton" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Exit" type="TextureButton" parent="."]
+layout_mode = 0
+offset_top = 2.0
+offset_right = 40.0
+offset_bottom = 42.0
+
+[node name="hover" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_4lph6")
+
+[node name="press" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("6_xrhym")
+
+[connection signal="mouse_entered" from="Play" to="." method="_on_play_mouse_entered"]
+[connection signal="pressed" from="Play" to="." method="_on_play_pressed"]
+[connection signal="mouse_entered" from="Options" to="." method="_on_options_mouse_entered"]
+[connection signal="pressed" from="Options" to="." method="_on_options_pressed"]
+[connection signal="mouse_entered" from="About" to="." method="_on_about_mouse_entered"]
+[connection signal="pressed" from="About" to="." method="_on_about_pressed"]
+[connection signal="mouse_entered" from="Exit" to="." method="_on_exit_mouse_entered"]
+[connection signal="pressed" from="Exit" to="." method="_on_exit_pressed"]

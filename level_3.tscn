@@ -1,0 +1,37 @@
+[gd_scene load_steps=6 format=3 uid="uid://bfw6jsgiyu3gu"]
+
+[ext_resource type="PackedScene" uid="uid://dcn0tvht7yeaw" path="res://enemy.tscn" id="1_mnti7"]
+[ext_resource type="AudioStream" uid="uid://cofk6qau5w80j" path="res://revovler-sound-328431.mp3" id="2_0q3pw"]
+[ext_resource type="PackedScene" uid="uid://cvhj4k268ve2y" path="res://enemy_spawner.tscn" id="3_cqj2q"]
+[ext_resource type="Texture2D" uid="uid://cxmdgc8hmliqk" path="res://Adobe Express - file.png" id="4_d1p8y"]
+[ext_resource type="PackedScene" uid="uid://b6w0mg1so6sg6" path="res://shop.tscn" id="5_ynm1h"]
+
+[node name="level3" type="Node2D"]
+
+[node name="Enemy" parent="." instance=ExtResource("1_mnti7")]
+
+[node name="pistoL-shot" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("2_0q3pw")
+
+[node name="enemy_spawner" parent="." instance=ExtResource("3_cqj2q")]
+position = Vector2(523, 136)
+
+[node name="AdobeExpress-File" type="Sprite2D" parent="."]
+position = Vector2(875, 516)
+texture = ExtResource("4_d1p8y")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+offset_right = 85.0
+offset_bottom = 40.0
+scale = Vector2(3, 3)
+theme_override_font_sizes/normal_font_size = 22
+text = "score"
+
+[node name="TextureButton" type="TextureButton" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="shop" parent="CanvasLayer" instance=ExtResource("5_ynm1h")]
+visible = false
